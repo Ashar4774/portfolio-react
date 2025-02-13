@@ -1,12 +1,12 @@
 import React, {useState} from 'react';
 import {FiMenu, FiX} from 'react-icons/fi';
-export default function Navbar(){
+function Navbar(){
     const [isOpen, setIsOpen] = useState(false);
     const NavBarLinks = [
         { id:1 , name: 'Home', link: '#home' },
-        { id:1 , name: 'About', link: '#about' },
-        { id:1 , name: 'Skills', link: '#skills' },
-        { id:1 , name: 'My Projects', link: '#projects' },
+        { id:2 , name: 'About', link: '#about' },
+        { id:3 , name: 'Skills', link: '#skills' },
+        { id:4 , name: 'My Projects', link: '#projects' },
     ];
 
     return(
@@ -51,3 +51,5 @@ export default function Navbar(){
         </header>
     )
 }
+
+export default Navbar;

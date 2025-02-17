@@ -62,7 +62,7 @@ export default function Skills() {
     return (
         <section className="relative min-h-screen overflow-hidden flex flex-col items-center justify-center text-white px-4 py-10">
             <div className="absolute z-0 w-72 h-36 sm:w-96 sm:h-44 bg-[#cd3cf5] rounded-full blur-3xl opacity-50 top-10 sm:top-28 left-1/2 transform -translate-x-1/2"></div>
-            <img src={php} alt="left picture" className="absolute z-10 left-2 top-2 sm:left-16 sm:top-32 transform -rotate-12 w-24 h-auto sm:w-32 opacity-50"/>
+            <img src={imghero} alt="left picture" className="absolute z-10 left-2 top-2 sm:left-16 sm:top-32 transform scale-x-[-1] -rotate-12 w-24 h-auto sm:w-32 opacity-50"/>
 
             <div className="relative z-20 text-center space-y-6 sm:space-y-10" data-aos="fade-up" data-aos-delay="300">
                 <header>
@@ -80,7 +80,7 @@ export default function Skills() {
                 </section>
             </div>
 
-            <img src={react} alt="Right Image" className="absolute z-10 right-2 top-2 sm:right-16 sm:top-32 transform rotate-12 w-24 h-auto sm:w-32 opacity-50"/>
+            <img src={imghero} alt="Right Image" className="absolute z-10 right-2 top-2 sm:right-16 sm:top-32 transform rotate-12 w-24 h-auto sm:w-32 opacity-50"/>
         </section>
     )
 }

@@ -4,6 +4,8 @@ import 'aos/dist/aos.css';
 import Hero from './components/Hero.jsx';
 import About from './components/About.jsx';
 import Skills from './components/Skills.jsx';
+import Contact from './components/Contact.jsx';
+import Footer from './components/Footer.jsx';
 
 function App() {
     useEffect(()=>{
@@ -17,6 +19,8 @@ function App() {
         <Hero />
         <About />
         <Skills />
+        <Contact />
+        <Footer />
       </main>
   )
 }

@@ -1,4 +1,6 @@
 import {React, useEffect} from "react";
+import { motion, useScroll } from 'framer-motion';
+
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 import Hero from './components/Hero.jsx';
@@ -14,8 +16,12 @@ function App() {
         })
     }, [])
 
+    const { scrollYProgress } = useScroll();
+
   return (
+
       <main className='bg-gray-950'>
+          <motion.div className="progress-bar" style = {{ scaleX: scrollYProgress }} />
         <Hero />
         <About />
         <Skills />

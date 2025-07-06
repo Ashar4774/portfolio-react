@@ -8,7 +8,7 @@ import about_2 from '/img_about_2.png';
 
 export default function About(){
     return (
-        <section id="section" className="min-h-screen overflow-hidden flex items-center justify-center text-white px-4 sm:px-4">
+        <section id="aboutSection" className="min-h-screen overflow-hidden flex items-center justify-center text-white px-4 sm:px-4">
             <div className="max-w-6xl w-full grid grid-cols-1 lg:grid-cols-2 gap-8 sm:gap-12 items-center">
                 <figure className="flex flex-wrap justify-center gap-4 relative" data-aos="fade-up" data-aos-delay="500">
                     <div className="h-[200px] sm:h-[300px] w-[300px] sm:w-[400px] lg:h-[300px] lg:w-[500px] bg-gradient-to-l from-[#6d2897] via-[#6c95f5] to-[#bb61c5] absolute transform rotate-12 z-0 right-5 -top-2 md:top-10 rounded-full"></div>

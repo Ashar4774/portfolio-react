@@ -1,5 +1,9 @@
-import {React, useEffect} from "react";
+import React, {useEffect, useRef} from "react";
 import { motion, useScroll } from 'framer-motion';
+import {gsap} from 'gsap';
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
+
+gsap.registerPlugin(ScrollTrigger);
 
 import AOS from 'aos';
 import 'aos/dist/aos.css';
@@ -10,10 +14,37 @@ import Contact from './components/Contact.jsx';
 import Footer from './components/Footer.jsx';
 
 function App() {
+    const imageRef = useRef();
+
     useEffect(()=>{
         AOS.init({
          duration: 1000,
-        })
+        });
+
+        // First scroll animation (Hero to About)
+        gsap.to(imageRef.current, {
+            y: 100,
+            scale: 1.05,
+            scrollTrigger: {
+                trigger: "#aboutSection",
+                start: "top center",
+                end: "bottom center",
+                scrub: true,
+                // markers: true, // for debugging
+            },
+        });
+
+        // Second scroll animation (About to Skills)
+        gsap.to(imageRef.current, {
+            x: 100,
+            rotation: 10,
+            scrollTrigger: {
+                trigger: "#skillsSection",
+                start: "top center",
+                end: "bottom center",
+                scrub: true,
+            },
+        });
     }, [])
 
     const { scrollYProgress } = useScroll();

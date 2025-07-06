@@ -14,12 +14,14 @@ import Contact from './components/Contact.jsx';
 import Footer from './components/Footer.jsx';
 
 function App() {
-    const imageRef = useRef();
+    const imageRef = useRef(null);
 
     useEffect(()=>{
         AOS.init({
          duration: 1000,
         });
+
+        console.log(imageRef.current);
 
         // First scroll animation (Hero to About)
         gsap.to(imageRef.current, {
@@ -53,7 +55,7 @@ function App() {
 
       <main className='bg-gray-950'>
           <motion.div className="progress-bar" style = {{ scaleX: scrollYProgress }} />
-        <Hero />
+        <Hero ref={imageRef} />
         <About />
         <Skills />
         <Contact />
